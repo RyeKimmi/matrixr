@@ -12,7 +12,10 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    for i in matrix:
+        for j in i:
+            print(j)
+        print '\n'
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
