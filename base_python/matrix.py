@@ -12,20 +12,47 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    for i in matrix:
-        for j in i:
-            print(j)
-        print '\n'
+#    ln = ''
+#    for i in matrix:
+#        for j in i:
+#            ln += str(j)
+#            ln += ' '
+#        ln = ln[:-1]
+#        ln += '\n'
+#    ln = ln[:-1]
+#    print(ln)
+
+    ln = ''
+    for i in range( len( matrix ) ):
+        ln += str( matrix[i][j]
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    m = []
+    for c in range( len(matrix) ):
+        m.append( [] )
+        i = 0
+        for r in range( len(matrix) ):
+            if i == c:
+                m[c].append( 1 )
+            else:
+                m[c].append( 0 )
+            i += 1
+    return m
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    l1 = ''
+    l2 = ''
+    for i in m1:
+        for j in i:
+            l1 += str(j)
+    for k in m1:
+        for l in k:
+            l2 += str(j)
+            
 
 
 
