@@ -40,12 +40,15 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
+    #m = new_matrix( len(m1[0]), len(m2) )
     h2 = new_matrix(len(m2[0]), len(m2))
+    #for i in m:
     for i in range(len(m2)):
         #print(i)
         #print(len(m2))
         temp = [l2 for l2 in m2[i]]
         #print(temp)
+        #for j in i:
         for j in range(len(m2[i])):
             #print(j)
             #print(len(m2[i]))
@@ -53,16 +56,13 @@ def matrix_mult( m1, m2 ):
             for k in range(len(m2[i])):
                 #print(k)
                 value += m1[k][j] * temp[k]
+                #value = (m1[i][0]*m2[0][j] + m1[i][1]*m2[1][j])
                 #print(value)
             h2[i][j] = value
     for x in range(len(m2)):
         for y in range(len(m2[i])):
             m2[x][y] = h2[x][y]
-    #m = new_matrix( len(m1[0]), len(m2) )
-    #for i in m:
-    #    for j in i:
-    #        j = (m1[i][0]*m2[0][j] + m1[i][1]*m2[1][j])
-    #return m
+    #print(m2)
 
 def new_matrix(rows = 4, cols = 4):
     m = []
